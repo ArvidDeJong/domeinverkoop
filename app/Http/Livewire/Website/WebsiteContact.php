@@ -31,11 +31,8 @@ class WebsiteContact extends Component
     public Domains $domain;
 
     public function mount(Request $request){
-        $log = new DomainsLog();
-        $log->domein = request()->getHttpHost();
-        $log->ip = request()->ip();
-        $log->agent = request()->userAgent();
-        $log->save();
+        Domains::check();
+
 
         $this->keuze = $request->input('keuze');
         $this->domain = Domains::where('domein', request()->getHttpHost())->first();
