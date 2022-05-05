@@ -42,7 +42,6 @@
 </head>
 
 <body>
-    @livewire('widgets.widgets-check-domain')
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check" viewBox="0 0 16 16">
             <title>Check</title>
