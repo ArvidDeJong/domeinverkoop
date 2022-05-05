@@ -86,7 +86,7 @@ class WebsiteContact extends Component
         ]);
 
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new MailContact($item));
-        // Mail::to($this->email)->send(new MailContact($item));
+        Mail::to($this->email)->send(new MailContact($item));
 
         $this->stored = true;
     }

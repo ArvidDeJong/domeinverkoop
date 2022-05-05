@@ -11,7 +11,10 @@
             </nav>
           </div>
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal">{{ request()->getHttpHost() }} kopen of huren?</h1>
+            <h1 class="display-4 fw-normal">{{ request()->getHttpHost() }} </h1>
+            <h2>kopen of huren? </h2>
+
+
             <p class="fs-5 text-muted">Een domeinnaam is een belangrijke tool om je product aan de man te brengen. <br>
                 Wij bieden jou de mogelijkheid om dit domein te kopen of huren.<br>
                 </p>
