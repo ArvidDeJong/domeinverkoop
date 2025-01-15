@@ -12,11 +12,11 @@
                 <h2>Vul uw gegevens in</h2>
                 <p>Nadat u het formulier heeft ingevuld ontvangt u een kopie van de aanvraag en nemen wij zo snel
                     mogelijk contact met u op</p>
-                <form wire:submit.prevent="submit">
+                <form wire:submit="submit">
                     <div class="mb-3 row">
                         <label for="keuze" class="col-sm-3 col-form-label">Ik wil het domein *</label>
                         <div class="col-sm-9">
-                            <select class="form-control" wire:model="keuze" id="keuze">
+                            <select class="form-control" wire:model.live="keuze" id="keuze">
                                 <option value="">Maak een keuze</option>
                                 <option value="Kopen">Kopen</option>
                                 <option value="Huren">Huren</option>
@@ -37,7 +37,7 @@
                     <div class="mb-3 row">
                         <label for="naam" class="col-sm-3 col-form-label">Naam * {{ $naam }}</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="naam" id="naam">
+                            <input type="text" class="form-control" wire:model="naam" id="naam">
                             @error('naam')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -46,7 +46,7 @@
                     <div class="mb-3 row">
                         <label for="adres" class="col-sm-3 col-form-label">Adres *</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="adres" id="telefoon">
+                            <input type="text" class="form-control" wire:model="adres" id="telefoon">
                             @error('adres')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -55,7 +55,7 @@
                     <div class="mb-3 row">
                         <label for="postcode" class="col-sm-3 col-form-label">Postcode *</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="postcode" id="postcode">
+                            <input type="text" class="form-control" wire:model="postcode" id="postcode">
                             @error('postcode')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -64,7 +64,7 @@
                     <div class="mb-3 row">
                         <label for="woonplaats" class="col-sm-3 col-form-label">Woonplaats *</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="woonplaats" id="woonplaats">
+                            <input type="text" class="form-control" wire:model="woonplaats" id="woonplaats">
                             @error('woonplaats')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -73,7 +73,7 @@
                     <div class="mb-3 row">
                         <label for="land" class="col-sm-3 col-form-label">Land *</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="land" id="land">
+                            <input type="text" class="form-control" wire:model="land" id="land">
                             @error('land')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -82,7 +82,7 @@
                     <div class="mb-3 row">
                         <label for="email" class="col-sm-3 col-form-label">Email *</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" wire:model.defer="email" id="email">
+                            <input type="email" class="form-control" wire:model="email" id="email">
                             @error('email')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -91,7 +91,7 @@
                     <div class="mb-3 row">
                         <label for="telefoon" class="col-sm-3 col-form-label">Telefoon *</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="telefoon" id="telefoon">
+                            <input type="text" class="form-control" wire:model="telefoon" id="telefoon">
                             @error('telefoon')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -107,7 +107,7 @@
                     <div class="mb-3 row">
                         <label for="bedrijfsnaam" class="col-sm-3 col-form-label">Bedrijfsnaam</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="bedrijfsnaam" id="bedrijfsnaam">
+                            <input type="text" class="form-control" wire:model="bedrijfsnaam" id="bedrijfsnaam">
                             @error('bedrijfsnaam')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -116,7 +116,7 @@
                     <div class="mb-3 row">
                         <label for="btw" class="col-sm-3 col-form-label">BTW nr.</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" wire:model.defer="btw" id="btw">
+                            <input type="text" class="form-control" wire:model="btw" id="btw">
                             @error('btw')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -125,7 +125,7 @@
                     <div class="mb-3 row">
                         <label for="opmerkingen" class="col-sm-3 col-form-label">Opmerkingen</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" wire:model.defer="opmerkingen" id="opmerkingen"></textarea>
+                            <textarea class="form-control" wire:model="opmerkingen" id="opmerkingen"></textarea>
                             @error('opmerkingen')
                                 <span class="error">{{ $message }}</span>
                             @enderror

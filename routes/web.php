@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Livewire\Website\WebsiteContact;
-use App\Http\Livewire\Website\WebsiteHomepage;
+use App\Livewire\Website\WebsiteContact;
+use App\Livewire\Website\WebsiteHomepage;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Website;
+namespace App\Livewire\Website;
 
 use App\Mail\MailContact;
 use App\Models\Contact;
